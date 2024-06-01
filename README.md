@@ -39,6 +39,7 @@ Follow these steps to set up and run the project locally -
 5. **Run the backend server:**
    ```sh
    npm start
+
 The backend server will run on http://localhost:5000.
 
 6. **Run the frontend server:**
