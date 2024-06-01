@@ -22,8 +22,8 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 React.js, HTML, Tailwind CSS & JavaScript, Node.js, Express.js, MongoDB
 
 
-### Installation Steps
-Follow these steps to set up and run the project locally:
+### Installation Steps :
+Follow these steps to set up and run the project locally -
 
 1. **Clone the repository:**
    Clone the repository to your local machine by running the following command in your terminal:
@@ -40,6 +40,7 @@ Follow these steps to set up and run the project locally:
    ```sh
    npm start
 The backend server will run on http://localhost:5000.
+
 6. **Run the frontend server:**
    ```sh
    cd your-frontend-repo
