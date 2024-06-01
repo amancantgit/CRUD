@@ -5,8 +5,8 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 
 
 
-[W4Schools](https://amancantgit.github.io/)
-![Image Description](src/assets/CRUD.png)
+[CRUD](https://amancantgit.github.io/)
+![Image Description](clientside/src/assets/CRUD.png)
 
 ### `Features`:
 1. Create Data: Users can add new entries to the application, storing important information.
