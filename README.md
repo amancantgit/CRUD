@@ -19,7 +19,7 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 React.js, HTML, Tailwind CSS, JavaScript, Node.js, Express.js, MongoDB
 
 
-### Installation Steps :
+### `Installation Steps` :
 Follow these steps to set up and run the project locally -
 
 1. **Clone the repository :**
