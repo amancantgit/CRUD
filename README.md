@@ -5,8 +5,8 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 
 
 
-[W4Schools](https://amancantgit.github.io/W3Schools-Clone/)
-![Image Description](src/assets/W3Schools.png)
+[W4Schools](https://amancantgit.github.io/)
+![Image Description](src/assets/CRUD.png)
 
 ### `Features`:
 1. Create Data: Users can add new entries to the application, storing important information.
@@ -28,9 +28,21 @@ Follow these steps to set up and run the project locally:
    Clone the repository to your local machine by running the following command in your terminal:
    ```sh
    git clone https://github.com/your-username/your-project.git
-2.**Navigate to the project directory:**
-  ```sh
-  cd your-project
-3. Install any neccessary dependencies.
-4. Run the project locally using npm start.
+2. **Navigate to the project directory:**
+   ```sh
+   cd your-project
+3. **Install any neccessary dependencies:**
+   ```sh
+   npm install
+4. **Set up MongoDB**
+5. **Run the backend server:**
+   ```sh
+   npm start
+6. **Run the frontend server:**
+   ```sh
+   cd your-frontend-repo
+   npm install
+   npm run dev
+
+
 
