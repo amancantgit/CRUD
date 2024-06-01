@@ -30,11 +30,7 @@ Follow these steps to set up and run the project locally -
    ```sh
    git clone https://github.com/your-username/your-project.git
 2. **Navigate to the project directory:**
-   ```sh
-   cd your-project
 3. **Install any neccessary dependencies:**
-   ```sh
-   npm install
 4. **Set up MongoDB**
 5. **Run the backend server:**
    ```sh
