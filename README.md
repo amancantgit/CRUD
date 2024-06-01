@@ -9,12 +9,10 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 ![Image Description](clientside/src/assets/CRUD.png)
 
 ### `Features`:
-1. Create Data: Users can easily add new entries to the application, ensuring the data is stored and organized.
-2. Read Data: Users can view all stored entries in a clean and intuitive user interface that enhances the browsing experience.
-3. Update Data: Users can update existing entries, allowing them to keep the information current and accurate.
-4. Delete Data: Users can remove entries that are no longer needed, keeping the data set relevant and up-to-date.
-5. Update Section: Users can enter the key of a specific entry to quickly retrieve and edit the corresponding information, streamlining the update process.
-6. Delete Section: Users can enter the key of a specific entry to quickly retrieve and delete the corresponding information, making data management more efficient.
+1. Users can effortlessly create new entries, view all stored data in an intuitive interface, update existing information to keep it current, and delete unnecessary entries to maintain relevance and organization.
+2. The intuitive user interface enhances the browsing experience and simplifies data management.
+3. Update Section: Users can enter the key of a specific entry to quickly retrieve and edit the corresponding information, streamlining the update process.
+4. Delete Section: Users can enter the key of a specific entry to quickly retrieve and delete the corresponding information, making data management more efficient.
 
 
 ### `Technologies used`: 
