@@ -4,8 +4,6 @@
 This project is a full-stack CRUD (Create, Read, Update, Delete) application which allows users to perform CRUD operations on a set of data, offering a seamless user experience.
 
 
-
-[CRUD](https://amancantgit.github.io/)
 ![Image Description](clientside/src/assets/CRUD.png)
 
 ### `Features`:
