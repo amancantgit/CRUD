@@ -14,7 +14,7 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 
 
 ### `Technologies used`: 
-React.js, HTML, Tailwind CSS, JavaScript, Node.js, Express.js, MongoDB
+React.js, JavaScript, Node.js, Express.js, MongoDB, Tailwind CSS
 
 
 ### `Installation Steps` :
