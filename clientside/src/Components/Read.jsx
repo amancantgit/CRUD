@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import edit from '../assets/edit.png'
 import edits from '../assets/edits1.png'
 import trash from '../assets/trash.png'
 import {Link, useNavigate} from 'react-router-dom'
-
 
 const Read = () => {
   const url = 'http://localhost:8000'
@@ -58,7 +56,6 @@ const Read = () => {
     let result = await data.json();
     if(result){
       navigate('/read');
-      alert("Record Deleted");
     }
   }
 
@@ -97,7 +94,6 @@ const Read = () => {
                     <img src={edits} alt="" className='w-5 mx-3 '/>
                   </Link>
                 </button>
-
 
                 <button type='button' onClick={()=> remove(item._id)}>
                   <Link to={`/delete/`+ item._id}>

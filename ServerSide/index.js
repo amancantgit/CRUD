@@ -11,8 +11,8 @@ app.get('/', (req, res)=>{
     res.send("running")
 })
 
-
 mongoose.connect("mongodb://127.0.0.1:27017/BREAD")
+// mongoose.connect("mongodb+srv://Aman:amanAWSdb@cluster0.0plgcho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=> {
     console.log("Connected to database");
 
@@ -42,6 +42,19 @@ mongoose.connect("mongodb://127.0.0.1:27017/BREAD")
     });
 
 
+    // Endpoint to check if key exists
+    app.get('/check-key/:key', async (req, res) => {
+      try {
+        const data = await schema.findOne({ key: req.params.key });
+        if (data) {
+          res.json({result : data, exists: true });
+        } else {
+          res.json({ exists: false });
+        }
+      } catch (err) {
+        res.status(500).json({ error: err });
+      }
+    });
 
     // Find and Update (with ID)
     app.get(`/update/:id`, async(req, res)=>{
@@ -103,8 +116,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/BREAD")
         console.log(data);
         res.json({result : data});
     })
-
-    
 
 
     app.listen(port, ()=> {

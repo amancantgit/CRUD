@@ -3,11 +3,9 @@ import { useNavigate } from 'react-router'
 
 const Delete = () => {
 
-  let inputStyle = 'my-1 text-[0.9rem] py-1 px-2 w-80 rounded outline-none focus:ring-2 focus:ring-blue-400 text-black'
+  let inputStyle = 'my-1 text-[0.9rem] py-1 px-2 w-72 rounded outline-none focus:ring-2 focus:ring-blue-400 text-black'
   let btnStyle = "bg-blue-600 hover:bg-blue-700 text-white py-0.5 px-6 m-auto border border-blue-700 rounded mt-4 transition duration-300 ease-in-out"
   let divStyle = 'flex justify-between items-center'
-
-
 
   const [key, setKey] = useState();
   const [name, setName] = useState("")
@@ -69,7 +67,7 @@ const Delete = () => {
         salary={salary}
       />
     ) : (
-      <h1>No Record Found</h1>
+      <h1 className='mt-4 text-black'>No Record Found</h1>
     )}
     </div>
     </>
@@ -87,7 +85,6 @@ function Show(props){
       method: "Delete",
     });
 
-    alert("Record Deleted Successfully")
     navigate('/read');
   }
 
@@ -115,7 +112,9 @@ function Show(props){
       </div>
     </div>
 
-    <div className='flex justify-center'><button onClick={deletedata} className='bg-red-600 hover:bg-red-700 text-white py-0.5 px-6  border border-red-800 rounded transition duration-300 ease-in-out mt-4'>Confirm to Delete</button></div>
+    <div className='flex justify-center mb-8'>
+      <button onClick={deletedata} className='bg-red-600 hover:bg-red-700 text-white py-0.5 px-6  border border-red-700 rounded transition duration-300 ease-in-out mt-4'>Confirm to Delete</button>
+    </div>
     </>
   )
 

@@ -15,10 +15,60 @@ const Edit = () => {
   const [profile, setProfile] = useState("");
   const [comapny, setCompany] = useState("");
   const [salary, setSalary] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [keyError, setKeyError] = useState("");
+  const [isKeyValid, setIsKeyValid] = useState(true);
   const navigate = useNavigate();
 
-  const params = useParams();
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
 
+  const handleEmailChange = (e) => {
+    const { value } = e.target;
+    setEmail(value);
+
+    if (value && !validateEmail(value)) {
+      setEmailError('Invalid email format');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const handleCompanyChange = (e) => {
+    const value = e.target.value;
+    const regex = /^[a-zA-Z0-9\s]*$/;
+
+    if (regex.test(value)) {
+      setCompany(value);
+    }
+  };
+
+  const checkKeyAvailability = async (key) => {
+    const response = await fetch(`http://localhost:8000/check-key/${key}`);
+    const result = await response.json();
+    if (result.exists) {
+      setKeyError(`Key ${key} is already occupied`);
+      setIsKeyValid(false);
+    } else {
+      setKeyError('');
+      setIsKeyValid(true);
+    }
+  };
+
+  const handleKeyChange = (e) => {
+    const { value } = e.target;
+    setKey(value);
+    if (value) {
+      checkKeyAvailability(value);
+    } else {
+      setKeyError('');
+      setIsKeyValid(true);
+    }
+  };
+
+  const params = useParams();
   console.log(params);
 
   const getData = async ()=>{
@@ -59,15 +109,17 @@ const Edit = () => {
 
     <form onSubmit={formSubmit} className='flex flex-col border p-10'>
     
-    <div className={divStyle}>
+    <div >
       <label className='text-[1rem], mr-2'>Key :</label>
       <input 
       type='number'
       value={key}
       placeholder='Enter key'
-      onChange={(e)=> setKey(e.target.value)}
-      className={inputStyle}
+      required
+      onChange={handleKeyChange}
+      className={`${inputStyle} ml-11`}
       />
+      {keyError && <div className="text-red-500 flex justify-center">{keyError}</div>}
     </div>
 
     <div className={divStyle}>
@@ -76,20 +128,28 @@ const Edit = () => {
       type='text'
       value={name}
       placeholder='Enter name'
+      required
       onChange={(e)=> setName(e.target.value)}
+      onKeyPress={(e) => {
+        if (!/[a-zA-Z ]/.test(e.key)) {
+            e.preventDefault();
+        }
+      }}
       className={inputStyle}
       />
     </div>
 
-    <div className={divStyle}>
+    <div>
       <label className='text-[1rem], mr-2'>Key :</label>
       <input 
       type='text'
       value={email}
       placeholder='Enter email'
-      onChange={(e)=> setEmail(e.target.value)}
-      className={inputStyle}
+      required
+      onChange={handleEmailChange}
+      className={`${inputStyle} ml-8`}
       />
+      {emailError && <div className="text-red-500 flex justify-center">{emailError}</div>}
     </div>
 
     <div className={divStyle}>
@@ -98,7 +158,13 @@ const Edit = () => {
       type='text'
       value={profile}
       placeholder='Enter profile'
+      required
       onChange={(e)=> setProfile(e.target.value)}
+      onKeyPress={(e) => {
+        if (!/[a-zA-Z ]/.test(e.key)) {
+            e.preventDefault();
+        }
+      }}
       className={inputStyle}
       />
     </div>
@@ -109,7 +175,8 @@ const Edit = () => {
       type='text'
       value={comapny}
       placeholder='Enter comapny'
-      onChange={(e)=> setCompany(e.target.value)}
+      required
+      onChange={handleCompanyChange}
       className={inputStyle}
       />
     </div>
@@ -120,6 +187,7 @@ const Edit = () => {
       type='number'
       value={salary}
       placeholder='Enter salary'
+      required
       onChange={(e)=> setSalary(e.target.value)}
       className={inputStyle}
       />
