@@ -4,7 +4,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 const Home = () => {
   const location = useLocation();
 
-  const baseStyles = 'mx-4 px-5 py-0.5 rounded-lg bg-[#A0524D] hover:bg-[#73211E] hover:text-white transition duration-500 ease-in-out';
+  const baseStyles = 'mx-4 px-5 py-0.5 rounded-lg bg-[#A65C4F] hover:bg-[#73211E] hover:text-white transition duration-500 ease-in-out';
   const activeStyles = 'bg-white text-red-800';
 
   const getLinkStyle = (path) => {
