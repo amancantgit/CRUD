@@ -10,9 +10,9 @@ This project is a full-stack CRUD (Create, Read, Update, Delete) application whi
 1. A specialized CRUD application with dedicated Update and Delete sections, allowing users to enter a specifc key
 to retrieve information and perform further actions, such as editing or deleting records.
 2. This approach streamlines the update process, making data management more efcient.
-3. The intuitive user interface enhances the browsing experience and simplifies data management.
-4. Users can eﬀortlessly create new entries, view all stored data, update existing records, and delete unnecessary
+3. Users can eﬀortlessly create new entries, view all stored data, update existing records, and delete unnecessary
 entries to maintain relevance and organization.
+4. The intuitive user interface enhances the browsing experience and simplifies data management.
 
 
 ### `Technologies used`: 
